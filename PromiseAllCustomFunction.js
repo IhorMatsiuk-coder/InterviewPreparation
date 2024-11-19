@@ -41,3 +41,13 @@ const myCoolPromiseAll = (promisesArray) => {
 Promise.all([e,a,b,d, 10, undefined]).then(data => console.log('res1-----', data))
 myCoolPromiseAll([e,a,b,d, 10, undefined]).then(res => console.log('res2-----', res))
 
+
+const s = new Set();
+s.add('a')
+s.add('b')
+s.add('b')
+s.add(1000)
+const o = {'1': 'tst'}
+s.add(o)
+s.add({'1': 'tst'})
+console.log(s) //{ 'a', 'b', 1000, { '1': 'tst' }, { '1': 'tst' } }
